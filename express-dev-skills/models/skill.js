@@ -9,7 +9,7 @@ const getAll = () => {
 }
 
 const getOne = (id) => {
-  console.log('id inside of getone function:', id)
+  
   let skill = skills.find((skill) => {
     return skill.id === parseInt(id)
   })

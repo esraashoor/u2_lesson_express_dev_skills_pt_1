@@ -1,17 +1,14 @@
-const skill = require('../models/skill')
+const Skill = require('../models/skills')
 
 const index = (req, res) => {
-  const skils = Skill.getAll()
-  const title = 'skills'
+  const skills = Skill.getAll()
   res.render('skills/index', {
-    skills,
-    title
+    skills
   })
 }
 
 const show = (req, res) => {
   const skill = Skill.getOne(req.params.id)
-  console.log(skill)
   res.render('skills/show', { skill })
 }
 
