@@ -1,17 +1,13 @@
 <%- include("../partials/header") %>
-        <h1>Express To-Do</h1>
+        <h1>Express skill</h1>
         <h3>skills as of <%= time %></h3>
         <ul>
-          <a href="/skills/new">Add To-Do</a>
+          <a href="/skills/new">Add skills</a>
           <% skills.forEach( skill => { %>
           
             <li>
-              <a href="/todos/<%= skill.id %>/edit">Edit</a>
-              <form action="/todos/<%= skill.id %>?_method=DELETE"
-                class="delete-form" method="POST">
-                <button type="submit">X</button>
-              </form>
-              <a href="/todos/<%= skill.id %>"><%= skill.skill %></a>
+             
+              <a href="/skills/<%= skill.id %>"><%= skill.skill %></a>
         <% }); %>
         </ul>
         <%- include("../partials/footer") %>

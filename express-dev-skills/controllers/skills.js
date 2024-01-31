@@ -19,12 +19,12 @@ const newSkill = (req, res) => {
 }
 
 const create = (req, res) => {
-  Todo.create(req.body)
+  Skill.create(req.body)
   res.redirect('/skills')
 }
 
 const deleteSkills = (req, res) => {
-  Todo.deleteOne(req.params.id);
+  Skill.deleteOne(req.params.id);
   res.redirect('/skills');
 };
 
